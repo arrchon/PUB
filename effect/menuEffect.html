@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Effect01 - jQuery</title>
+    <style>
+        @font-face {
+            font-family: 'MapoFlowerIsland';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(img/img_h09.png) no-repeat center center;
+            background-size: cover;
+            background-color: rgb(99, 22, 64);
+            height: 100vh;
+            position: relative;
+            font-size: 16px;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(35, 35, 148, 0.3);
+            z-index: -1;
+        }
+
+        /* info */
+        .info {
+            position: absolute;
+            color: #fff;
+            font-family: 'MapoFlowerIsland';
+        }
+
+        .info.left {
+            left: 20px;
+            top: 20px;
+        }
+
+        .info.right {
+            right: 20px;
+            top: 20px;
+        }
+
+        .info.bottom {
+            left: 20px;
+            bottom: 20px;
+        }
+
+        .info ul {}
+
+        .info li {
+            font-size: 1rem;
+            line-height: 1.4;
+            list-style: none;
+        }
+
+        .info li a {
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #ffff;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            display: inline-block;
+            font-size: 0.8rem;
+            margin: 3px;
+        }
+
+        @media (max-width: 600px){
+            body {font-size: 12px;}
+            .info.right {display: none;}
+        }
+
+        /* option */
+        @font-face {
+            font-family: 'Binggrae-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Binggrae-Bold';
+        }
+
+        #tab-menu {
+            max-width: 600px;
+            background: #eaa110;
+            position: absolute;
+            left: 50%;
+            top: 20vh;
+            transform: translate(-50%);
+            border-radius: 5px;
+        }
+
+        #tab-btn {}
+
+        #tab-btn ul {
+            display: flex;
+        }
+
+        #tab-btn li {
+            flex-basis: 20%;
+            text-align: center;
+            list-style: none;
+        }
+
+        #tab-btn li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 20px 20px 15px 20px;
+            display: block;
+        }
+
+        #tab-btn li.active a {
+            border-bottom: 3px solid #2b110e;
+            color: #2b110e;
+        }
+
+        #tab-cont {
+            background: #fff;
+            padding: 20px;
+            border-radius: 0 0 5px 5px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        #tab-cont>div {
+            display: none;
+        }
+
+        #tab-cont>div:nth-child(1) {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="info left">
+        <h1>Tab Menu Effect01 - jQuery</h1>
+        <p>탭 메뉴 이펙트</p>
+    </div>
+
+    <nav class="info right">
+        <ul>
+            <li><a href="menuEffect01-jQuery.html">1</a> <a href="menuEffect01-javascript.html">1</a></li>
+            <li><a href="menuEffect02-jQuery.html">2</a> <a href="menuEffect02-javascript.html">2</a></li>
+            <li><a href="menuEffect03-jQuery.html">3</a> <a href="menuEffect03-javascript.html">3</a></li>
+            <li><a href="menuEffect04-jQuery.html">4</a> <a href="menuEffect04-javascript.html">4</a></li>
+            <li><a href="menuEffect05-jQuery.html">5</a> <a href="menuEffect05-javascript.html">5</a></li>
+            <li><a href="menuEffect06-jQuery.html">6</a> <a href="menuEffect06-javascript.html">6</a></li>
+            <li><a href="menuEffect07-jQuery.html">7</a> <a href="menuEffect07-javascript.html">7</a></li>
+            <li><a href="menuEffect08-jQuery.html">8</a> <a href="menuEffect08-javascript.html">8</a></li>
+            <li><a href="menuEffect09-jQuery.html">9</a> <a href="menuEffect09-javascript.html">9</a></li>
+            <li><a href="menuEffect10-jQuery.html">10</a> <a href="menuEffect10-javascript.html">10</a></li>
+        </ul>
+    </nav>
+
+    <!-- contents -->
+    <section class="contents">
+        <div id="tab-menu">
+            <div id="tab-btn">
+                <ul>
+                    <li class="active"><a href="#">Tab1</a></li>
+                    <li><a href="#">Tab2</a></li>
+                    <li><a href="#">Tab3</a></li>
+                    <li><a href="#">Tab4</a></li>
+                    <li><a href="#">Tab5</a></li>
+                </ul>
+            </div>
+            <div id="tab-cont">
+                <div>지구에 생물학적 생명체가 어떻게 시작되었는지에 대한 의문은 오랫동안 과학자들의 궁금증을 자아냈다. 생물학적 생명체는 매우 복잡하기 때문에 한두 가지 요소만 가지고는 완전한 설명이
+                    되지 않는다.</div>
+                <div>지난 16일 네이처 커뮤니케이션즈(Nature Communications)에 발표된 논문은 10억 년 동안 지구에 떨어진 번개가 지구에 생물학적 생명체가 태어나도록 자극하는데
+                    결정적인 역할을 했다는 것을 시사한다.
+                </div>
+                <div>예일 대학의 지구 및 행성 과학자인 벤자민 헤스(Benjamin Hess)는 “이 연구는 생명체가 어떻게 지구에서 형성되었는지 그리고 어떻게 다른 지구와 비슷한 행성에서 생명체가
+                    여전히 형성되고 있는지를 이해하는 데 도움이 된다”라고 말했다.</div>
+                <div>제1저자인 벤자민 헤스와 리즈 대학 시절 그의 멘토였던 교수들은 풀구라이트(fulgurite, 섬전암) 샘플을 연구하고 있었다. 풀구라이트는 번개가 땅에 떨어졌을 때 만들어진
+                    돌멩이다. 이들이 연구하던 표본은 2016년 미국 일리노이주 글렌 엘린(Glen Ellyn)에 벼락이 떨어지면서 형성돼, 인근 휘튼대학(Wheaton College) 지질학과에
+                    기증됐다.</div>
+                <div>리즈 대학 연구팀은 글렌 엘린에서 발견된 풀구라이트에서 인이 풍부한 슈라이베르스석(石)(schreibersite)이 대량으로 추출되는 것을 보고 깜짝 놀랐다. 생물학적 생명에
+                    필수적인 요소인 인은, 생명체의 움직임이나 성장 및 생식에 이르는 모든 생명 과정에 핵심적인 역할을 한다. 초기 지구 표면에 존재하는 인은 물에 녹지 않는 미네랄에 함유되어
+                    있었지만, 슈라이베르스석에 함유된 인은 녹을 수 있다.</div>
+            </div>
+        </div>
+    </section>
+    <!-- //contents -->
+</body>
+
+</html>

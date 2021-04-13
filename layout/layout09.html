@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout09</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    li {
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .notice {
+      position: relative;
+      margin: 2%;
+    }
+
+    .notice .more {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    #wrap {}
+    #header {
+      height: 100px;
+      background: #222;
+    }
+    #banner {
+      height: 200px;
+      background: #334;
+    }
+    #contents {
+      height: 600px;
+      background: #454;
+    }
+    #footer {
+      height: 150px;
+      background: #590;
+    }
+
+    .container {
+      width: 1000px;
+      height: inherit;
+      background-color: rgba(255, 255, 255, 0.3);
+      margin: 0 auto;
+    }
+
+    /* cont */
+
+    .cont1 {
+      width: 100%;
+      height: 300px;
+      background-color: rgb(121, 61, 61);
+    }
+    .cont2 {
+      width: 50%;
+      height: 300px;
+      background-color: rgb(131, 103, 103);
+      float: left;
+    }
+    .cont3 {
+      width: 50%;
+      height: 300px;
+      background-color: rgb(52, 51, 134);
+      float: left;
+    }
+
+    /* foot */
+
+    .foot1 {
+      width: 20%;
+      height: 100px;
+      background-color: rgb(195, 250, 209);
+      float: left;
+      margin: 20px;
+    }
+    .foot2 {
+      width: 20%;
+      height: 100px;
+      background-color: rgb(195, 250, 209);
+      float: left;
+      margin: 20px;
+    }
+    .foot3 {
+      width: 20%;
+      height: 100px;
+      background-color: rgb(195, 250, 209);
+      float: left;
+      margin: 20px;
+    }
+    .foot4 {
+      width: 20%;
+      height: 100px;
+      background-color: rgb(195, 250, 209);
+      float: left;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <div class="container"></div>
+    </div>
+    <div id="banner">
+      <div class="container"></div>
+    </div>
+    <div id="contents">
+      <div class="container">
+        <div class="cont1"></div>
+        <div class="cont2">
+          <div class="notice">
+            <h2>타이틀</h2>
+            <ul>
+              <li>pop() 메서드는 배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
+              </li>
+              <li>pop() 메서드는 배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
+              </li>
+              <li>pop() 메서드는 배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
+              </li>
+              <li>pop() 메서드는 배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
+              </li>
+              <li>pop() 메서드는 배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
+              </li>
+            </ul>
+            <div><a href="#" class="more">더보기</a></div>
+          </div>
+        </div>
+        <div class="cont3"></div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div class="foot1"></div>
+        <div class="foot2"></div>
+        <div class="foot3"></div>
+        <div class="foot4"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

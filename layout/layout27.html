@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naver influencer center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            
+        }
+
+        main {
+            width: 100%;
+            background: #f6fbff;
+        }
+
+        #header {
+            width: 100%;
+            height: 80px;
+            background: #FFF;
+            margin: 0 auto;
+            position: relative;
+            border-bottom: 2px solid #ccc;
+        }
+
+        #header img {
+            position: absolute;
+            left: 50px;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+        }
+
+        #header ul {
+            position: absolute;
+            top: 30px;
+            left: 600px;
+        }
+
+        #header li {
+            list-style: none;
+            letter-spacing: 1px;
+            display: inline;
+            padding: 0px 15px;
+        }
+
+        #header li:nth-child(3) {
+            color: rgb(0, 172, 0);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #header a {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            text-decoration: none;
+            border: 2px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: #000;
+        }
+
+        .naver {
+            position: absolute;
+            left: 100px;
+            top: 20px;
+            font-weight: bold;
+        }
+
+        #header2 {
+            width: 100%;
+            height: 60px;
+            background: rgb(236, 236, 236);
+            margin: 0 auto;
+        }
+
+        #header2 ul {
+            text-align: center;
+            padding: 17px;
+        }
+
+        #header2 li {
+            list-style: none;
+            display: inline;
+            padding: 0 9px;
+        }
+
+        #header2 li:nth-child(3) {
+            color: rgb(0, 170, 0);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        article {
+            width: 100%;
+            height: 600px;
+            margin: 0 auto;
+            background: url(../layout/img/banner-bg2.png) no-repeat center center;
+            background-size: cover;
+        }
+        .article {
+            text-align: center;
+        }
+        .art1 {
+            padding-top: 50px;
+            color: #FFF;
+        }
+        .art1 span {
+            border-bottom: 1px solid #ccc;
+        }
+        .art2 {
+            margin-top: 25px;
+            color: #fff;
+            font-size: 54px;
+            font-weight: bold;
+        }
+        .art3 {
+            margin-top: 40px;
+            color: #fff;
+            opacity: 0.8;
+        }
+        .art4 {
+            margin-top: 50px;
+            color: #fff;
+            opacity: 0.5;
+        }
+        .art5 {
+            margin-top: 50px;
+            color: #6082fa;
+            font-weight: bold;
+        }
+        .art5 span {
+            border: 1px solid #fff;
+            border-radius: 20px;
+            padding: 10px 30px;
+            background: #fff;
+        }
+
+        section {
+            width: 100%;
+            height: 700px;
+            background: #f1f3ff;
+            margin: 0 auto;
+        }
+
+        .box {
+            position: relative;
+        }
+        .box img {
+            position: absolute;
+            left: 350px; top: 200px;
+            height: 400px;
+        }
+        .b1 {
+            position: absolute;
+            right: 350px; top: 150px;
+            width: 400px;
+            height: 80px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 15px 30px 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .b2 {
+            position: absolute;
+            right: 350px; top: 300px;
+            width: 400px;
+            height: 80px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 15px 30px 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .b3 {
+            position: absolute;
+            right: 350px; top: 450px;
+            width: 400px;
+            height: 80px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 15px 30px 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .box p {
+            text-align: left;
+        }
+
+        .box p strong {
+            background: #f1f3ff;
+        }
+
+        .box p em {
+            background: #f1f3ff;
+        }
+        .box a {
+            text-decoration: none;
+            font-weight: bold;
+            color: blue;
+            text-align: right;
+        }
+        footer {
+            width: 100%;
+            height: 200px;
+            background: #000;
+            margin: 0 auto;
+        }
+
+        .foot1 {
+            width: 1200px;
+            height: inherit;
+            background: #000;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+        }
+
+        .foot1 .p1 {
+            opacity: 0.6;
+            padding-top: 10px;
+        }
+        .foot1 .p2 {
+            opacity: 0.7;
+            margin-top: 50px;
+        }
+
+        .foot1 .p2 span {
+            background-color: rgb(107, 107, 107);
+            padding: 10px 25px;
+            border-radius: 15px;
+        }
+
+        .foot1 .p3 {
+            opacity: 0.6;
+            margin-top: 65px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main>
+            <header id="header">
+                <img src="https://ncreatorsnext.pstatic.net/img/logo.a61f5142308413b313275c691aa13c9a.gif" alt=""
+                    width="30" class="MobileGnb__image_logo___1Prf7">
+                <div class="naver">NAVER<br>INFLUENCER CENTER</div>
+                <ul>
+                    <li>인플루언서 안내</li>
+                    <li>광고수익 혜택</li>
+                    <li>성장 지원 프로그램</li>
+                    <li>브랜드커넥트</li>
+                    <li>공지</li>
+                </ul>
+                <a href="#">인플루언서로 로그인</a>
+            </header>
+            <header id="header2">
+                <ul>
+                    <li>크리에이터 워크숍</li>
+                    <li>슈퍼애드</li>
+                    <li>엑스퍼트 컨설팅</li>
+                    <li>멤버십 혜택</li>
+                    <li>어워드</li>
+                </ul>
+            </header>
+            <article>
+                <div class="article">
+                    <div class="art1"><span>엑스퍼트 컨설팅</span></div>
+                    <div class="art2">법률, 세무부터 동영상 제작까지!<br>지식iN 엑스퍼트 상담, 클래스 이용을 지원합니다.</div>
+                    <div class="art3">혼자서는 해결하기 어려웠던 문제들, <br> 1인 최대 10만원의 엑스퍼트 쿠폰으로 전문가의 도움을 받아보세요.</div>
+                    <div class="art4">i 지급 조건 상세 보기</div>
+                    <div class="art5"><span>내 eXpert 쿠폰 확인하기</span></div>
+                </div>
+            </article>
+            <section>
+                <div class="box">
+                    <img src="../layout/img/배너2.png" alt="배너">
+                    <div class="b1">
+                        <p>이 이미지 쓰고 싶은데<br><strong>저작권에 문제 없을까요?</strong></p>
+                        <a href="#">법률 상담 받기 ></a>
+                    </div>
+                    <div class="b2">
+                        <p><strong>광고 수익에 대한 세금 신고</strong><br>꼭 해야하나요? 어떻게 하죠?</p>
+                        <a href="#">세무 상담 상담 받기 ></a>
+                    </div>
+                    <div class="b3">
+                        <p>영상 콘텐츠 만들고 싶은데,<br><em>동영상 제작을 배우고 싶어요!</em></p>
+                        <a href="#">동영상 제작 상담 ></a>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="foot1">
+                    <div class="p1">TOP ↑</div>
+                    <div class="p2"><span>로그인</span></div>
+                    <div class="p3">NAVER</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>
